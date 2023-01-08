@@ -13,9 +13,9 @@ const merge=require("deepmerge");
 export const apiData:RequestHandler= async (req: Request, res: Response)=>{
     const qCity=req.query.city;
     const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${qCity}&appid=${process.env.API_KEY}`)        
-    const check = await city.findOne({cityname:qCity});
+    const checkData = await city.findOne({cityname:qCity});
     console.log();
-    if(!check){
+    if(!checkData){
     const dat=response.data;
             const weatherData=new weather({
                 cityname: qCity,
