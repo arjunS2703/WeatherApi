@@ -1,13 +1,11 @@
 import  mongoose  from "mongoose";
 import axios from "axios";
-const jsonSplitter = require('json-splitter');
 const dotenv =require('dotenv').config();
 import express, {Request, RequestHandler, Response} from 'express';
 const city = require("../model/city");
 const temp= require("../model/temp");
 const wind=require("../model/wind");
 const weather = require("../model/weather");
-const merge=require("deepmerge");
 
 
 export const apiData:RequestHandler= async (req: Request, res: Response)=>{

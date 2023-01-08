@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const audSchema = new mongoose.Schema({
+const weatherSchema = new mongoose.Schema({
     cityname: String,
     date: Date,
     main: String,
@@ -15,4 +15,4 @@ const audSchema = new mongoose.Schema({
     visibility: Number
 });
 
-module.exports = mongoose.model("weather",audSchema);
+module.exports = mongoose.model("weather",weatherSchema);
